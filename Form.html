@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <section>
+        <form name="MMS" method="post" enctype="text/plain" action="https://mail.google.com">
+            <legend>
+                Identify Your Gender?
+            </legend>
+            <label >
+                <input id="male" type="radio" name="male-female" value="Male" checked> Male
+                <input id="female" type="radio" name="male-female" value="Female"> Female
+            </label >
+            
+            <legend style="margin-top: 10px;">Pick two countries of your choice</legend>
+            <input type="checkbox" name="countries" id="pakistan" value="pakistan" checked>
+            <label for="pakistan">Pakistan</label>
+
+            <input type="checkbox" name="countries" id="yemen" value="yemen" >
+            <label for="yemen">Yemen</label>
+
+            <input type="checkbox" name="countries" id="palestine" value="palestine" >
+            <label for="palestine">Palestine</label>
+
+            <fieldset style="margin-top: 10px;">
+                <input type="text" name="myname" id="name" placeholder="NGR" maxlength="7">
+                <!-- <textarea name="feedback" id="name" cols="25" rows="2" placeholder="Enter Your Details"></textarea> -->
+                <button type="submit">Submit</button>
+                </fieldset>
+                <fieldset>
+                <label for="country">Choose Your Country</label>
+                <select name="country" id="country" size="2 multiple>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="China">China</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Togo">Togo</option>
+                </select>
+
+            </fieldset>
+
+    </form>
+</section>
+  
+</body>
+</html>
