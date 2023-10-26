@@ -1,0 +1,13 @@
+body{
+    background-image: url('./images/download\ \(2\).jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+#text{
+    position: absolute;
+    top: 95%;
+    left: 3%;
+    color:darkred;
+    font-size:20px;
+}
