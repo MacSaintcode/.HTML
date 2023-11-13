@@ -3,6 +3,184 @@ body{
     background-attachment: fixed;
     background-size: 100%; 
     background-color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.Format{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height:245%;
+    color:rgb(255, 255, 255);
+    position:absolute;
+    left:0px;
+    top:0px;
+    bottom: 0px;
+}
+.Main_bar{
+    width: 39.6%;
+    background-color:rgb(0, 0, 0);
+    height:100%;float:right;
+    text-align:center;
+    border-right: 1px solid rgba(255, 255, 255, 0.259);
+    border-left: 1px solid rgba(255, 255, 255, 0.259); 
+    font-weight:bolder;
+}
+.Left_bar{
+    width: 30%;
+    background-color:rgb(0, 0, 0);
+    height:20%;
+    float:left;
+    text-align:right;
+    font-weight:bolder;
+    
+}
+.Right_bar{
+    width: 30%;
+    background-color:rgb(0, 0, 0);
+    height:12%;
+    float:right;
+    font-weight:bolder;
+    
+}
+.Main_header{
+    background-color: rgb(0, 0, 0);
+    height: 60;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.437);
+}
+.Main_header ul{
+    padding: 0;
+    margin: 0;
+}
+.Main_header ul li{
+    list-style-type: none;
+    display: inline;
+}
+.Main_header ul a{
+    text-decoration: rgb(0, 0,0);
+    color: white;
+    display: inline-block;
+    padding: 20px 50px 20px 20px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.Main_header a:hover {
+    color: rgb(56, 16, 68)
+}
+
+.post{
+    height: 21%;
+    overflow: hidden;
+    padding: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.437);
+    color: aliceblue;
+}
+.post:last-child{
+    height: 500px;
+    padding: 5px;
+}
+.post:first-child{
+    height: 5%;
+}
+/* .post:last-child .post_pic{
+    height: 90%;
+    padding: 15px;
+} */
+/* .post:last-child .icons{
+    height: 5%;
+} */
+.profile_pic{
+    background-color: rgb(0, 0, 0);
+    height: 300;
+    width: 15%;
+    float: left;
+}
+.profile_pic img{
+    border-radius: 70%;
+}
+
+.title{
+    background-color: rgb(0, 0, 0);
+    height: 70;
+    float: right;
+    width: 85%;
+    text-align: left;
+   
+}
+.title p{
+    font-size: 17px;
+    display: inline;
+    font-weight: 500;
+}
+.title small{
+    color: white;
+}
+.caption{
+    padding: 5px;
+}
+.post_pic{
+    background-color: rgb(0, 0, 0);
+    height: 80%;
+    text-align: left;
+    padding: 0px 50px;
+}
+.post_pic img{
+    border-radius: 5%;
+}
+.quotes{
+    padding: 0px 50px;
+    margin: 0;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 2px;
+    height: 85%;
+  }
+ .icons{
+    margin-top: 20px;
+    width: 100%;
+    height: 5%; 
+}  
+/* @media screen and (max-width: 739px){
+    .icons{
+        height: 8.5%;
+    }
+    .icons a{
+        font-size: 10px;
+    }
+    .icons img{
+        width: 3%;
+    }
+} */
+.icons i{
+    color: white;
+    
+}
+.icons a{
+    text-decoration: none;
+    color: rgba(250, 250, 250, 0.731);
+    padding-left: 20px;
+    font-weight: 100;
+}
+.icons a:hover{
+    color: rgb(159, 94, 94);
+}
+.inner_right{
+    position: relative;
+    left: 20px;
+    padding: 10px;
+}
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%; 
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden;
 
     
@@ -63,8 +241,8 @@ body{
    
 }
 .post{
-    background-color: rgb(0, 0, 0);
-    /* height: 304; */
+    background-color: rgb(228, 129, 0);
+    height: 304;
     border-bottom: 1px solid white;
 }
 .profile_pic{
@@ -72,7 +250,7 @@ body{
     top:8px;
     background-color: rgb(0, 0, 0);
     height: 97.2%;
-    width: 10%;
+    width: 15%;
     float: left;    
 }
 .title{
@@ -81,7 +259,7 @@ body{
     position:relative;
     top:5px;
     float: right;
-    width: 90%;
+    width: 85%;
     font-size:small;
     text-align: left;
     font-weight:600;
@@ -95,35 +273,6 @@ body{
     width: 100%;
     font-weight: 400;
     
-}
-.icons{
-    margin-top: 20px;
-    width: 100%;
-    height: 5%; 
-    position: relative;
-    right: 70px;
-}  
-.icons i{
-    color: white; 
-
-}
-.like{
-    left:5px;
-    position:relative; 
-    font-family:'Times New Roman', Times, serif;
-}
-
-.icons a{
-    text-decoration: none;
-    color: rgba(250, 250, 250, 0.731);
-    padding-left: 80px;
-    font-weight: 100;
-}
-.icons a:hover{
-    color: rgb(39, 49, 125);
-}
-.icons i:hover{
-    color: rgb(39, 49, 125);
 }
 .user{
     opacity: 20%;

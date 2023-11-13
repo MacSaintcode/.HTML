@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.twitter-container {
+    display: flex;
+}
+
+.left-pane {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.left-pane i {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.left-pane ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-pane ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post-btn {
+    margin-top: 20px;
+}
+
+.blue-rectangle {
+    background-color: #1DA1F2;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 999px; /* to create a rounded rectangle */
+}
+
+.vertical-line {
+    border-left: 1px solid #38444d;
+    height: 100vh;
+    margin-left: 10px;
+}
+
+.user-account {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
