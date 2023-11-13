@@ -43,7 +43,7 @@ body{
     height:100%;
     float:right;
     font-weight:bolder;
-    overflow: hidden;
+    /* overflow: hidden; */
     
 }
 .Main_header{
