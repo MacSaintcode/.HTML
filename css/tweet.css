@@ -96,6 +96,15 @@ body{
     font-weight: 400;
     
 }
+.setin{
+    position: relative;
+     width:20px ;
+     top:23px ;
+     left:340px
+}
+
+/* Teju css */
+
 .icons{
     margin-top: 20px;
     width: 100%;
@@ -111,8 +120,9 @@ body{
     left:5px;
     position:relative; 
     font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: small;
 }
-
 .icons a{
     text-decoration: none;
     color: rgba(250, 250, 250, 0.731);
@@ -120,11 +130,13 @@ body{
     font-weight: 100;
 }
 .icons a:hover{
-    color: rgb(39, 49, 125);
+    color: rgb(0, 117, 213);
 }
 .icons i:hover{
-    color: rgb(39, 49, 125);
+    color: rgb(0, 117, 213);
 }
+/* End  */
+
 .user{
     opacity: 20%;
 }
@@ -277,4 +289,56 @@ body{
 .user-info {
     position: relative;
     bottom: 20px;
+}
+/* Ada Css */
+
+.course-options_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options_list {
+    display: flex;
+    gap: 5rem;
+}
+
+.options_list li{
+    position: relative;
+    color: black;
+    cursor: pointer;
+}
+
+.options_list li.active{
+    color: var(--color-thickgreen);
+}
+
+.options_list li.active::after {
+    background-color: var(--color-thickgreen);
+}
+
+.options_list li::after,
+.options_list li a {
+    position: relative;
+    color: black;
+}
+
+.options_list li a.active{
+    color: var(--color-thickgreen);
+}
+
+.options_list li::after {
+    content: ' ';
+    display: block;
+    height: 2px;
+    background-color: black;
+    bottom: -4px;
+    width: 0;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+}
+
+.options_list li:hover::after,
+.options_list li.active::after{
+   width: 100%;
 }
