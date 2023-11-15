@@ -99,7 +99,7 @@ body{
 .setin{
     position: relative;
      width:20px ;
-     top:23px ;
+     bottom: 55px;
      left:340px
 }
 .user{
@@ -458,55 +458,51 @@ body{
     position: relative;
     bottom: 20px;
 }
-/* Ada Css */
-/* 
-.course-options_content {
+/* Tabbed Navigation */
+.navbar {
+    background-color: #000000;
+    height: 60px;
+    position: relative;
+    bottom: 20px;
+  }
+  
+  .tabs {
+    list-style: none;
+    /* margin: 0;
+    padding: 0; */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.options_list {
-    display: flex;
-    gap: 5rem;
-}
-
-.options_list li{
+  }
+  .butin1{
     position: relative;
-    color: black;
-    cursor: pointer;
-}
+    right: 40px;
+    width: 384%;
+    height: 64px;
+    background-color: #000000;
+    color: white;
+    font-size:medium;
+    font-weight: 800;
+    text-align: center;
+    border: none;
 
-.options_list li.active{
-    color: var(--color-thickgreen);
-}
-
-.options_list li.active::after {
-    background-color: var(--color-thickgreen);
-}
-
-.options_list li::after,
-.options_list li a {
+  }
+  .butin2{
     position: relative;
-    color: black;
-}
+    left: 232px;
+    border: none;
+    width:  384%;
+    height: 64px;
+    color: white;
+    background-color: #000000;
+    font-size:medium;
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  .butin1:hover {
+    background-color: rgba(31, 31, 31, 0.541);
+  }
 
-.options_list li a.active{
-    color: var(--color-thickgreen);
+  .butin2:hover {
+    background-color: rgba(31, 31, 31, 0.541);
 }
-
-.options_list li::after {
-    content: ' ';
-    display: block;
-    height: 2px;
-    background-color: black;
-    bottom: -4px;
-    width: 0;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-}
-
-.options_list li:hover::after,
-.options_list li.active::after{
-   width: 100%;
-} */
