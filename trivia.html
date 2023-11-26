@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3 id="question1">What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <button class="fail">6 people per 1 sheep</button>
+                <button class="fail">3 people per 1 sheep</button>
+                <button class="win">1 people per 1 sheep</button>
+                <button class="fail">1 people per 3 sheep</button>
+                <button class="fail">1 people per 6 sheep</button>
+                <p id="response"></p>   
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3 id="question2">In which country is it illegal to own only one guinea pig,as a lone guinea pig might get lonely?</h3>
+
+                    <input type="text" id="ans" autocomplete="off" placeholder="Enter Answer">
+                    <button id="check">Check Answer</button>
+                    <p id="response1"></p>
+
+            </div>
+        </div>
+
+        <script>
+            var seen='no';
+            let correct = document.querySelector('.win');
+                correct.addEventListener("click",function(){
+                    correct.style.backgroundColor='green';
+                    document.querySelector('#response').innerHTML='Correct!';
+                    seen='yes'
+                })
+                
+                let incorrect=document.querySelectorAll('.fail');
+                    for (let i = 0; i < incorrect.length; i++) {
+                        incorrect[i].addEventListener('click',function(){                           
+                            incorrect[i].style.backgroundColor='red';
+                            document.querySelector('#response').innerHTML='Incorrect!';
+                    }
+                    )}
+                if (seen === 'yes'){
+                    incorrect.style.backgroundColor='red';
+                }
+
+                var quest=['In which country is it illegal to own only one guinea pig,as a lone guinea pig might get lonely?',
+                'What is the name of the worlds largest desert',
+                'Who is the author of the Harry Potter series',
+                'What is the capital of Australia',
+                'What is the name of the worlds largest ocean'];
+
+                var an=['Switzerland','Antarctic','J.K.Rowling','Canberra','Pacific Ocean']
+                var y=0
+                var n=0
+                
+                let ans = document.querySelector('#check');
+                let inp=document.querySelector('#ans');
+                ans.addEventListener("click",function(){
+                    let anr=inp.value;
+                    console.log(y);
+                    console.log(n)
+                    console.log(quest.length-1)
+                    if(anr === an[n]){
+                        if (y <= quest.length-1){
+                            inp.style.backgroundColor = 'green';
+                            if(y>=quest.length-1){
+                                n=-1;
+                                y=-1;
+                            }
+                            document.querySelector('#question2').innerHTML=quest[y+1];
+                            document.querySelector('#response1').innerHTML='Correct!';
+                            y++;
+                            n++;
+                        }                
+                    }
+                    else{
+                        inp.style.backgroundColor = 'red';
+                        document.querySelector('#response1').innerHTML='Incorrect!';
+                    }
+                    inp.addEventListener("click",function(){
+                        inp.style.backgroundColor = 'white';
+                        inp.value='';
+                        document.querySelector('#response1').innerHTML='';
+                    })
+                })
+
+                
+
+        </script>
+    </body>
+</html>
