@@ -38,16 +38,59 @@
         </div>
 
         <script>
+            var questi=['What is the approximate ratio of people to sheep in New Zealand?',
+            'What is the only continent that does not have any active volcanoes?',
+                'What is the most common letter in the English alphabet?',
+                'What is the smallest country in the world by land area?'];
+                
+                var ans1=['7 people per 1 sheep','3 people per 1 sheep','1 people per 1 sheep','1 people per 3 sheep',
+                '1 people per 6 sheep']
+                var ans2=['Africa','Europe','Australia','Asia',
+                'South America']
+                var ans3=['A','I','E','O',
+                'U']
+                var ans4=['Monaco','San Marino','Vatican City','Nauru',
+                'Tuvalu']
+                var g=0;
+                var ans5=[ans1,ans2,ans3,ans4]
+                let val=[document.querySelector('#bt1'),
+                document.querySelector('#bt2'),
+                document.querySelector('#bt3'),
+                document.querySelector('#bt4'),
+                document.querySelector('#bt5')]
+
             let correct = document.querySelector('.win');
+            let incorrect=document.querySelectorAll('.fail');
+            var u=0
                 correct.addEventListener("click",function(){
-                    correct.style.backgroundColor='green';
-                    document.querySelector('#response').innerHTML='Correct!';
+
+                        correct.style.backgroundColor='green';
+                        if(u>=questi.length-1){
+                            u=-1;
+                            g=-1;
+                        }   
+                        document.querySelector('#response').innerHTML='Correct!';
+                        setTimeout(function() {
+                            document.querySelector('#question1').innerHTML=questi[u];
+                            correct.style.backgroundColor='#d9edff';
+                            for (const element of incorrect) {
+                                element.style.backgroundColor='#d9edff';
+                            }
+                            
+                            document.querySelector('#response').innerHTML='';
+                            for(let i=0;i<5;i++){
+                                    val[i].innerHTML=ans5[g][i];
+                                }
+                          }, 1000);
+                        u++;
+                        g++; 
+                    
                 })
                 
-                let incorrect=document.querySelectorAll('.fail');
-                    for (let i = 0; i < incorrect.length; i++) {
-                        incorrect[i].addEventListener('click',function(){                           
-                            incorrect[i].style.backgroundColor='red';
+                
+                    for (const element of incorrect) {
+                        element.addEventListener('click',function(){                           
+                            element.style.backgroundColor='red';
                             document.querySelector('#response').innerHTML='Incorrect!';
                     }
                     )}
@@ -70,7 +113,7 @@
                     console.log(n)
                     console.log(quest.length-1)
                     if(anr === an[n]){
-                        if (y <= quest.length-1){
+
                             inp.style.backgroundColor = 'green';
                             if(y>=quest.length-1){
                                 n=-1;
@@ -81,11 +124,18 @@
                             y++;
                             n++;
                         }                
-                    }
+                    
                     else{
                         inp.style.backgroundColor = 'red';
                         document.querySelector('#response1').innerHTML='Incorrect!';
                     }
+                    setTimeout(function() {
+                        if(inp.style.backgroundColor == 'red' || inp.style.backgroundColor == 'green'){
+                            inp.style.backgroundColor = 'white';
+                            inp.value='';
+                            document.querySelector('#response1').innerHTML='';
+                        }
+                      }, 1000);
                     inp.addEventListener("click",function(){
                         if(inp.style.backgroundColor == 'red' || inp.style.backgroundColor == 'green'){
                             inp.style.backgroundColor = 'white';
