@@ -33,24 +33,19 @@
                     <input type="text" id="ans" autocomplete="off" placeholder="Enter Answer">
                     <button id="check">Check Answer</button>
                     <p id="response1"></p>
-
             </div>
         </div>
-
         <script>
             var questi=['What is the approximate ratio of people to sheep in New Zealand?',
             'What is the only continent that does not have any active volcanoes?',
                 'What is the most common letter in the English alphabet?',
                 'What is the smallest country in the world by land area?'];
                 
-                var ans1=['7 people per 1 sheep','3 people per 1 sheep','1 people per 1 sheep','1 people per 3 sheep',
-                '1 people per 6 sheep']
-                var ans2=['Africa','Europe','Australia','Asia',
-                'South America']
-                var ans3=['A','I','E','O',
-                'U']
-                var ans4=['Monaco','San Marino','Vatican City','Nauru',
-                'Tuvalu']
+                var ans1=['7 people per 1 sheep','3 people per 1 sheep',
+                '1 people per 1 sheep','1 people per 3 sheep','1 people per 6 sheep']
+                var ans2=['Africa','Europe','Australia','Asia','South America']
+                var ans3=['A','I','E','O','U']
+                var ans4=['Monaco','San Marino','Vatican City','Nauru','Tuvalu']
                 var g=0;
                 var ans5=[ans1,ans2,ans3,ans4]
                 let val=[document.querySelector('#bt1'),
@@ -58,12 +53,13 @@
                 document.querySelector('#bt3'),
                 document.querySelector('#bt4'),
                 document.querySelector('#bt5')]
+                
+                
 
             let correct = document.querySelector('.win');
             let incorrect=document.querySelectorAll('.fail');
             var u=0
                 correct.addEventListener("click",function(){
-
                         correct.style.backgroundColor='green';
                         if(u>=questi.length-1){
                             u=-1;
@@ -73,10 +69,12 @@
                         setTimeout(function() {
                             document.querySelector('#question1').innerHTML=questi[u];
                             correct.style.backgroundColor='#d9edff';
-                            for (const element of incorrect) {
-                                element.style.backgroundColor='#d9edff';
-                            }
                             
+                            for (const element of incorrect) {
+                                element.style.backgroundColor='#d9edff';                               
+                            }
+                            correct.className='fail'
+                                                 
                             document.querySelector('#response').innerHTML='';
                             for(let i=0;i<5;i++){
                                     val[i].innerHTML=ans5[g][i];
@@ -84,16 +82,23 @@
                           }, 1000);
                         u++;
                         g++; 
-                    
                 })
-                
-                
-                    for (const element of incorrect) {
-                        element.addEventListener('click',function(){                           
-                            element.style.backgroundColor='red';
-                            document.querySelector('#response').innerHTML='Incorrect!';
+                if(g==0){
+                    document.querySelector('#bt2').className='win';
+                }else if(g==1){
+                    document.querySelector('#bt4').className='win';
+                }else if(g==2){
+                    document.querySelector('#bt1').className='win';
+                }else if(g==3 || g==4){
+                    document.querySelector('#bt5').className='win';
+                }   
+
+                for (const element of incorrect) {
+                    element.addEventListener('click',function(){                           
+                        element.style.backgroundColor='red';
+                        document.querySelector('#response').innerHTML='Incorrect!';
                     }
-                    )}
+                )}
 
                 var quest=['In which country is it illegal to own only one guinea pig,as a lone guinea pig might get lonely?',
                 'What is the name of the worlds largest desert',
@@ -109,11 +114,7 @@
                 let inp=document.querySelector('#ans');
                 ans.addEventListener("click",function(){
                     let anr=inp.value;
-                    console.log(y);
-                    console.log(n)
-                    console.log(quest.length-1)
                     if(anr === an[n]){
-
                             inp.style.backgroundColor = 'green';
                             if(y>=quest.length-1){
                                 n=-1;
@@ -124,30 +125,27 @@
                             y++;
                             n++;
                         }                
-                    
+
                     else{
                         inp.style.backgroundColor = 'red';
                         document.querySelector('#response1').innerHTML='Incorrect!';
                     }
                     setTimeout(function() {
-                        if(inp.style.backgroundColor == 'red' || inp.style.backgroundColor == 'green'){
+                        if(inp.style.backgroundColor == 'red' || inp.style.backgroundColor == 'green'){ 
                             inp.style.backgroundColor = 'white';
                             inp.value='';
                             document.querySelector('#response1').innerHTML='';
                         }
-                      }, 2000);
+                      }, 1000);
                     inp.addEventListener("click",function(){
                         if(inp.style.backgroundColor == 'red' || inp.style.backgroundColor == 'green'){
+                            
                             inp.style.backgroundColor = 'white';
                             inp.value='';
                             document.querySelector('#response1').innerHTML='';
                         }
-
                     })
                 })
-
-                
-
         </script>
     </body>
 </html>
