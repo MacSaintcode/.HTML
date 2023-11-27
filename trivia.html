@@ -92,9 +92,12 @@
                         document.querySelector('#response1').innerHTML='Incorrect!';
                     }
                     inp.addEventListener("click",function(){
-                        inp.style.backgroundColor = 'white';
-                        inp.value='';
-                        document.querySelector('#response1').innerHTML='';
+                        if(inp.style.backgroundColor == 'red' || inp.style.backgroundColor == 'green'){
+                            inp.style.backgroundColor = 'white';
+                            inp.value='';
+                            document.querySelector('#response1').innerHTML='';
+                        }
+
                     })
                 })
 
