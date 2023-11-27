@@ -38,12 +38,10 @@
         </div>
 
         <script>
-            var seen='no';
             let correct = document.querySelector('.win');
                 correct.addEventListener("click",function(){
                     correct.style.backgroundColor='green';
                     document.querySelector('#response').innerHTML='Correct!';
-                    seen='yes'
                 })
                 
                 let incorrect=document.querySelectorAll('.fail');
@@ -53,9 +51,6 @@
                             document.querySelector('#response').innerHTML='Incorrect!';
                     }
                     )}
-                if (seen === 'yes'){
-                    incorrect.style.backgroundColor='red';
-                }
 
                 var quest=['In which country is it illegal to own only one guinea pig,as a lone guinea pig might get lonely?',
                 'What is the name of the worlds largest desert',
