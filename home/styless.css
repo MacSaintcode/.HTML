@@ -4,7 +4,7 @@ body{
     top: 0px;
     right: 0px;
     left: 0px;
-    /* overflow-x: hidden; */
+    flex:content;
 }
 .header{
     height: 10%;
