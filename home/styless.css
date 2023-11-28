@@ -4,6 +4,7 @@ body{
     top: 0px;
     right: 0px;
     left: 0px;
+    /* overflow-x: hidden; */
 }
 .header{
     height: 10%;
@@ -16,9 +17,12 @@ body{
 .body2{
     position:absolute;
     width: 100%;
-    left: 0px;
+    left: 30px;
+    right: 30px;
     top: 10%;
     padding-top: 30px;
+    font-size: large;
+    
 }
 #hoby{
     text-decoration: none;
@@ -74,7 +78,6 @@ body{
     text-decoration: none;
     color: white;
     padding-left: 30px;
-    text-align: right;
     font-size: larger;
 }
 #about:hover{
