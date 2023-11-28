@@ -84,3 +84,12 @@ body{
     color: aquamarine;
     font-size: large;
 }
+#me{
+    height: 400px;
+    border-radius: 8%;
+    align-items:center;
+}
+#links{
+    text-decoration: none;
+    color: aqua;
+}
