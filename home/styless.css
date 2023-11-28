@@ -85,11 +85,18 @@ body{
     font-size: large;
 }
 #me{
+    float: left;
     height: 400px;
     border-radius: 8%;
     align-items:center;
+    
 }
 #links{
     text-decoration: none;
     color: aqua;
+}
+#texta{
+    position:relative;
+    left: 20px;
+    font-size: larger;
 }
