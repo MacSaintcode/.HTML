@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(16, 32, 54);
+    color: white;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+.header{
+    height: 10%;
+    background-color: rgba(10, 22, 43, 0.732);
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+.body2{
+    position:absolute;
+    width: 100%;
+    left: 0px;
+    top: 10%;
+    padding-top: 30px;
+}
+#hoby{
+    text-decoration: none;
+    color: white;
+    padding-left: 25px;
+    position: relative;
+    top: 40%;
+    font-size: larger;
+}
+#hoby:hover{
+    color: aquamarine;
+    font-size: large;
+}
+#home{
+    position: relative;
+    top: 40%;
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    font-size: larger;
+}
+#home:hover{
+    color: aquamarine;
+    font-size: large;
+}
+#edu{
+    position: relative;
+    top: 40%;
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    font-size: larger;
+}
+#edu:hover{
+    color: aquamarine;
+    font-size: large;
+}
+#skill{
+    position: relative;
+    top: 40%;
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    font-size: larger;
+}
+#skill:hover{
+    color: aquamarine;
+    font-size: large;
+}
+#about{
+    position: relative;
+    top: 40%;
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    text-align: right;
+    font-size: larger;
+    
+}
+#about:hover{
+    color: aquamarine;
+    font-size: large;
+}
