@@ -1,22 +1,25 @@
 body{
-    background-color: rgb(16, 32, 54);
+    background-color: rgb(60, 85, 120);
     color: white;
     top: 0px;
     right: 0px;
     left: 0px;
     flex:content;
+    overflow-x:hidden;
 }
 .header{
     height: 10%;
     background-color: rgba(10, 22, 43, 0.732);
     position: absolute;
-    width: 100%;
+    width: 130vw;
     left: 0px;
+    right: 0px;
     top: 0px;
+
 }
 .body2{
     position:absolute;
-    width: 100%;
+    width: 100vw;
     left: 30px;
     right: 30px;
     top: 10%;
@@ -88,8 +91,7 @@ body{
     float: left;
     height: 400px;
     border-radius: 8%;
-    align-items:center;
-    
+    align-items:center;   
 }
 #links{
     text-decoration: none;
@@ -98,5 +100,30 @@ body{
 #texta{
     position:relative;
     left: 20px;
+    right: 20px;
     font-size: larger;
+    padding-right: 50px;
 }
+#hed{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+
+}
+#hed:hover{
+    color: aqua;
+}
+#pic{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: large;
+}
+/* .footer{
+    position:fixed;
+    height: 200px;
+    background-color: rgba(10, 22, 43, 0.732);
+    width: 130vw;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+} */
